@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1</title>
+</head>
+<body>
+<h1>Exercise 8</h1>
+<ul id ="leapYear"></ul>
+<script>
+  'use strict';
+  let start, end, li;
+  let ul = document.querySelector('#leapYear')
+  start = parseInt(prompt("Enter start year: "));
+  end = parseInt(prompt("Enter end year: "));
+  ul.innerHTML = "Leap years between " + start + " to " + end + ":"
+  while (start < end) {
+    if(start % 4 === 0) {
+       if(start % 100 === 0) {
+          if(start % 400 === 0) {
+             li = document.createElement("li");
+             li.appendChild(document.createTextNode(start));
+             ul.appendChild(li);
+          }
+       } else {
+          li = document.createElement("li");
+          li.appendChild(document.createTextNode(start));
+          ul.appendChild(li);
+       }
+    }
+    start ++
+  }
+</script>
+
+</body>
+</html>

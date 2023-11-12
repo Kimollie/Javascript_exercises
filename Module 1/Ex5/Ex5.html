@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1</title>
+</head>
+<body>
+<h1>Exercise 5</h1>
+<p id = "leapyear"></p>
+<script>
+  'use strict';
+  let year, leap;
+  year = parseInt(prompt("Enter year: "));
+  if(year % 4 === 0) {
+       if(year % 100 === 0) {
+          if(year % 400 === 0) {
+             leap = "leap year";
+          } else {
+             leap = "not leap year";
+          }
+       } else {
+          leap = "leap year";
+       }
+    } else {
+       leap = "not leap year";
+    }
+  document.querySelector('#leapyear').innerHTML = year + " is " + leap + "."
+</script>
+</body>
+</html>

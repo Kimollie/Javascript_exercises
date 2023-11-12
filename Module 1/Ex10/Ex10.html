@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1</title>
+</head>
+<body>
+<h1>Exercise 10</h1>
+<p id = "probability"></p>
+<script>
+  'use strict';
+  let dice, estimate, result, probability;
+  let roll = 0
+  let sum = 0
+  dice = parseInt(prompt("Enter number of dice rolls: "));
+  estimate = parseInt(prompt("Estimate sum of eye number: "));
+  for (let i = 1; i < 10000; i++) {
+      while (roll < dice) {
+      roll ++;
+      result = Math.floor(Math.random()*6)+1;
+      sum += result;
+    }
+  }
+
+  document.querySelector('#result').innerHTML = "The die rolls " + time + " times, and sum of results is " + sum + ".";
+</script>
+
+</body>
+</html>

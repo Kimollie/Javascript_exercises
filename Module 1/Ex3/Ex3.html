@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1</title>
+</head>
+<body>
+<h1>Exercise 3</h1>
+<p id = "sum"></p>
+<p id = "product"></p>
+<p id = "average"></p>
+<script>
+  'use strict';
+  let num1, num2, num3, sum, product, average;
+  num1 = parseInt(prompt("Enter first number: "));
+  num2 = parseInt(prompt("Enter second number: "));
+  num3 = parseInt(prompt("Enter third number: "));
+  sum = num1 + num2 + num3;
+  product = num1 * num2 * num3;
+  average = sum/3
+  document.querySelector('#sum').innerHTML = "Sum: " + sum
+  document.querySelector('#product').innerHTML = "Product: " + product
+  document.querySelector('#average').innerHTML = "Average: " + average
+</script>
+
+</body>
+</html>

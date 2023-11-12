@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1</title>
+</head>
+<body>
+<h1>Exercise 9</h1>
+<p id ="primeCheck"></p>
+<script>
+  'use strict';
+  let prime = "prime";
+  let num = parseInt(prompt("Enter a number: "));
+  if (num === 1) {
+    prime = "not prime";
+  } else {
+    for (let i = 2; i<num; i++) {
+      if (num % i === 0) {
+          prime = "not prime";
+          break;
+      }
+    }
+  }
+  document.querySelector('#primeCheck').innerHTML = num + " is " + prime + ".";
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1</title>
+</head>
+<body>
+<h1>Exercise 7</h1>
+<p id = "result"></p>
+<script>
+    'use strict';
+    let time, result;
+    let roll = 0
+    let sum = 0
+    time = parseInt(prompt("Enter number of dice rolls: "));
+    while (roll < time) {
+      roll ++;
+      result = Math.floor(Math.random()*6)+1;
+      sum += result;
+    }
+    document.querySelector('#result').innerHTML = "The die rolls " + time + " times, and sum of results is " + sum + ".";
+</script>
+</body>
+</html>
