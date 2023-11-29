@@ -13,3 +13,11 @@ const students = [
     id: '5423679',
   },
 ];
+const select = document.querySelector('#target');
+
+for (let student of students) {
+  let option = document.createElement('option');
+  option.value = student.id;
+  option.innerHTML = student.name;
+  select.appendChild(option);
+}

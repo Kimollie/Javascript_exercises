@@ -94,6 +94,11 @@ const picArray = [
 
 // add your code here
 const section = document.querySelector('#pictures');
+const dialog = document.querySelector('dialog');
+const largeImg = document.querySelector('dialog img');
+const span = document.querySelector('span');
+
+
 for (let pic of picArray) {
   const article = document.createElement('article');
   const h2 = document.createElement('h2');
@@ -101,16 +106,35 @@ for (let pic of picArray) {
   const img = document.createElement('img');
   const figcaption = document.createElement('figcaption');
   const p = document.createElement('p');
+
   article.classList.add("card");
+
   article.appendChild(h2);
   article.appendChild(figure);
   article.appendChild(p);
   figure.appendChild(img);
   figure.appendChild(figcaption);
+
   h2.innerHTML = pic.title;
   img.src = pic.image.medium;
   img.alt = pic.title;
   figcaption.innerHTML = pic.caption;
   p.innerHTML = pic.description;
+
   section.appendChild(article);
 }
+
+const articles = document.querySelectorAll('article');
+for (let article of articles) {
+  let index = [].indexOf.call(articles,article);
+  article.addEventListener('click', function (evt) {
+    largeImg.src = picArray[index].image.large;
+    largeImg.alt = picArray[index].title;
+    dialog.showModal();
+  })
+}
+
+span.addEventListener('click',function (evt) {
+  dialog.close();
+})
+
